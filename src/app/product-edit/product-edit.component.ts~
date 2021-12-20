@@ -27,10 +27,6 @@ export class ProductEditComponent implements OnInit {
     //get id from url
     this._ActivatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       const id = paramMap.get('id');
-      
-      //thay doi gia tri thuoc tinh de su dung cho edit
-      this.id = id;
-      
       let product = this._ProductService.find(id);
 
       //fill input to form
