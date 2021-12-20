@@ -12,6 +12,7 @@
 
 #B0: Tich hop boostrap
     https://github.com/taitamfc/C08-M4-DEMO/tree/main/src/assets
+    
     https://github.com/taitamfc/C08-M4-DEMO/blob/main/src/index.html
 
 #B1: Khai bao interface product
@@ -39,7 +40,7 @@ https://github.com/taitamfc/C08-M4-DEMO/commit/f598df453261eca5c251d2c01d5431740
     https://github.com/taitamfc/C08-M4-DEMO/blob/main/src/app/products/products.component.ts
  - Hoàn thiện phần view và hiển thị data
     https://github.com/taitamfc/C08-M4-DEMO/blob/main/src/app/products/products.component.html
-    
+
 #B5: Làm việc với ProductEditComponent
  - Import ReactiveFormsModule vào app.module.ts
  - Khai bao cac doan ma o component
