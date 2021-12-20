@@ -36,12 +36,12 @@ export class ProductService {
 
   //store
   store( product:Product ):void{
-
+    this.products.push(product);
   }
 
   //update
   update( id:number, product:Product ):void{
-
+    this.products[id] = product;
   }
 
   //destroy
