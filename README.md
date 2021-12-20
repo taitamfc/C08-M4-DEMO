@@ -11,9 +11,8 @@
 - ng g s product
 
 #B0: Tich hop boostrap
-    https://github.com/taitamfc/C08-M4-DEMO/tree/main/src/assets
-    
-    https://github.com/taitamfc/C08-M4-DEMO/blob/main/src/index.html
+    - https://github.com/taitamfc/C08-M4-DEMO/tree/main/src/assets
+    - https://github.com/taitamfc/C08-M4-DEMO/blob/main/src/index.html
 
 #B1: Khai bao interface product
 https://github.com/taitamfc/C08-M4-DEMO/blob/main/src/app/product.ts
