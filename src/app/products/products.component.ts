@@ -9,12 +9,22 @@ import { Product } from "./../product";
 })
 export class ProductsComponent implements OnInit {
   products:Product[] = [];
+  keyword:string = '';
   constructor(
     private _ProductService:ProductService
   ) { }
 
   ngOnInit(): void {
     this.products = this._ProductService.getAll();
+  }
+
+  search(value:any){
+    if(value){
+      this.products = this._ProductService.search(value);
+    }else{
+      this.products = this._ProductService.getAll();
+    }
+    
   }
 
 }

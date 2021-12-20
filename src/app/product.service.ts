@@ -49,5 +49,16 @@ export class ProductService {
     this.products.splice(id,1);
   }
 
+  //search
+  search( q:any ):Product[] {
+    let results:Product[] = [];
+    for( let product of this.products ){
+      if(product.name == q){
+        results.push(product);
+      }
+    }
+    return results;
+  }
+
 
 }
