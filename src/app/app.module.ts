@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
@@ -8,6 +9,7 @@ import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductDeleteComponent } from './product-delete/product-delete.component';
 
 import { AppRoutingModule } from "./app-routing.module";
+
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { AppRoutingModule } from "./app-routing.module";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

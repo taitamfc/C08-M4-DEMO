@@ -30,7 +30,7 @@ export class ProductService {
   }
 
   //lay 1 item theo id
-  find( id:number ):Product {
+  find( id:any ):Product {
     return this.products[id];
   }
 
