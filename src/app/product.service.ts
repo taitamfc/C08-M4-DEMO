@@ -1,11 +1,53 @@
 import { Injectable } from '@angular/core';
+import {Product} from "./product";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
+  //khai bao data cho product
+  products:Product[] = [
+    {
+      name: 'Iphone',
+      price: 20000
+    },
+    {
+      name: 'Samsung',
+      price: 20000
+    },
+    {
+      name: 'Oppo',
+      price: 20000
+    }
+  ];
+
   constructor() { }
 
-  
+  //lay tat ca
+  getAll():Product[] {
+    return this.products;
+  }
+
+  //lay 1 item theo id
+  find( id:number ):Product {
+    return this.products[id];
+  }
+
+  //store
+  store( product:Product ):void{
+
+  }
+
+  //update
+  update( id:number, product:Product ):void{
+
+  }
+
+  //destroy
+  destroy( id:number):void{
+
+  }
+
+
 }
