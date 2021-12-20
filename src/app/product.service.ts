@@ -46,7 +46,7 @@ export class ProductService {
 
   //destroy
   destroy( id:number):void{
-
+    this.products.splice(id,1);
   }
 
 
