@@ -12,7 +12,7 @@ import { Product } from "./../product";
 export class ProductDeleteComponent implements OnInit {
 
   //property id store id in memory
-  id: number = 0;
+  id: any = 0;
   product!: Product;
 
   constructor(
@@ -25,14 +25,22 @@ export class ProductDeleteComponent implements OnInit {
     //get id from url
     this._ActivatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       const id = paramMap.get('id');
-      this.product = this._ProductService.find(id);
+      this.id = id;
+      this._ProductService.find(id).subscribe(product => {
+        this.product = product;
+      });
+      
     });
   }
 
   handleYes(){
-    this._ProductService.destroy(this.id);
+    this._ProductService.destroy(this.id).subscribe(() => {
+      this._Router.navigate(['/products']);
+    }, (e: any) => {
+      console.log(e);
+    });
     //redirect to products
-    this._Router.navigate(['/products']);
+    //this._Router.navigate(['/products']);
   }
   handleNo(){
     //redirect to products

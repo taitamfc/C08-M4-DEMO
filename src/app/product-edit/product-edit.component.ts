@@ -13,7 +13,7 @@ import { Product } from "./../product";
 })
 export class ProductEditComponent implements OnInit {
   //property id store id in memory
-  id: number = 0;
+  id: any = 0;
   
   productForm!: FormGroup;
 
@@ -30,19 +30,20 @@ export class ProductEditComponent implements OnInit {
       
       //thay doi gia tri thuoc tinh de su dung cho edit
       this.id = id;
-      
-      let product = this._ProductService.find(id);
-
-      //fill input to form
-      this.productForm = new FormGroup({
-        name: new FormControl(product.name,[
-          Validators.required,
-          Validators.minLength(5)
-        ]),
-        price: new FormControl(product.price,[
-          Validators.required
-        ]),
+      this._ProductService.find(id).subscribe(product => {
+        //fill input to form
+        this.productForm = new FormGroup({
+          name: new FormControl(product.name,[
+            Validators.required,
+            Validators.minLength(5)
+          ]),
+          price: new FormControl(product.price,[
+            Validators.required
+          ]),
+        });
       });
+
+      
 
       //build with reactiform form
     });
@@ -56,10 +57,12 @@ export class ProductEditComponent implements OnInit {
       price: formData.price
     }
     // call service update
-    this._ProductService.update(this.id,product);
-
-    //redirect to products
-    this._Router.navigate(['/products']);
+    this._ProductService.update(this.id, product).subscribe(() => {
+      //redirect to products
+      this._Router.navigate(['/products']);
+    }, e => {
+      console.log(e);
+    });
   }
 
 }

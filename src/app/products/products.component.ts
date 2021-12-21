@@ -15,14 +15,18 @@ export class ProductsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.products = this._ProductService.getAll();
+    this._ProductService.getAll().subscribe(products => {
+      this.products = products;
+    });
   }
 
   search(value:any){
     if(value){
       this.products = this._ProductService.search(value);
     }else{
-      this.products = this._ProductService.getAll();
+      this._ProductService.getAll().subscribe(products => {
+        this.products = products;
+      });
     }
     
   }

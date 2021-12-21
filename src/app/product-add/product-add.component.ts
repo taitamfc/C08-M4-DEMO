@@ -38,11 +38,15 @@ export class ProductAddComponent implements OnInit {
       name: formData.name,
       price: formData.price
     }
-    // call service update
-    this._ProductService.store(product);
+    this._ProductService.store(product).subscribe(() => {
+      //reset form
+      this.productForm.reset();
 
-    //redirect to products
-    this._Router.navigate(['/products']);
+      //redirect to products
+      this._Router.navigate(['/products']);
+    }, e => {
+      console.log(e);
+    });
   }
 
 }

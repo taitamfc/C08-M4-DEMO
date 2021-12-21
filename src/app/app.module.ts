@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import {HttpClientModule} from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
@@ -23,7 +25,8 @@ import { AppRoutingModule } from "./app-routing.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
