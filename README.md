@@ -4,6 +4,7 @@
 # B1: Thay doi noi dung cua file service
 - https://github.com/taitamfc/C08-M4-DEMO/blob/CRUD-API/src/environments/environment.ts
 - https://github.com/taitamfc/C08-M4-DEMO/blob/CRUD-API/src/app/product.service.ts
+- https://github.com/taitamfc/C08-M4-DEMO/blob/CRUD-API/src/app/product.ts
 
 # B2: Thay doi noi dung file products.component.ts
 - https://github.com/taitamfc/C08-M4-DEMO/blob/CRUD-API/src/app/products/products.component.ts
