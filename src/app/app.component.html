@@ -4,4 +4,11 @@
     <li><a routerLink="/product-add" routerLinkActive="active">Product Add</a></li>
   </ul>
 </nav>
+<div class="input-group">
+  <input #txt type="text" class="form-control" >
+  <span class="input-group-btn">
+      <button on-click="search(txt.value)" class="btn btn-default" type="button">Go!</button>
+  </span>
+</div>
+
 <router-outlet></router-outlet>

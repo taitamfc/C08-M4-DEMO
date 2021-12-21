@@ -10,6 +10,8 @@ import { Product } from "./../product";
 export class ProductsComponent implements OnInit {
   products:Product[] = [];
   keyword:string = '';
+  idDelete:any = null;
+  nameDelete:any = null;
   constructor(
     private _ProductService:ProductService
   ) { }
@@ -25,6 +27,16 @@ export class ProductsComponent implements OnInit {
       this.products = this._ProductService.getAll();
     }
     
+  }
+
+  handleDeleteItem(id:any){
+    let product = this._ProductService.find(id);
+    this.idDelete = id;
+    this.nameDelete = product.name;
+  }
+
+  doDelete(id:any){
+    this._ProductService.destroy(id);
   }
 
 }

@@ -13,7 +13,7 @@ import { Product } from "./../product";
 })
 export class ProductEditComponent implements OnInit {
   //property id store id in memory
-  id: number = 0;
+  id: any = 0;
   
   productForm!: FormGroup;
 
