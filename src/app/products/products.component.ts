@@ -22,7 +22,9 @@ export class ProductsComponent implements OnInit {
 
   search(value:any){
     if(value){
-      this.products = this._ProductService.search(value);
+      this._ProductService.search(value).subscribe(products => {
+        this.products = products;
+      });
     }else{
       this._ProductService.getAll().subscribe(products => {
         this.products = products;

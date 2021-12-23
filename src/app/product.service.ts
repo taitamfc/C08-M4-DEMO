@@ -56,13 +56,7 @@ export class ProductService {
   }
 
   //search
-  search( q:any ):Product[] {
-    let results:Product[] = [];
-    for( let product of this.products ){
-      if(product.name == q){
-        results.push(product);
-      }
-    }
-    return results;
+  search( q:any ):Observable<Product[]> {
+    return this.http.get<Product[]>(API_URL + '/products/?search='+q);
   }
 }
