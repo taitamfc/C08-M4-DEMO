@@ -18,7 +18,7 @@
 - https://github.com/taitamfc/C08-M4-DEMO/blob/main/src/app/product.ts
 
 #B2: Khai bao cac phuong thuc trong service
-- https://github.com/taitamfc/C08-M4-DEMO/commit/f598df453261eca5c251d2c01d5431740b70b06d
+- https://github.com/taitamfc/C08-M4-DEMO/blob/main/src/app/product.service.ts
 
 #B3: Lam viec voi router
  - Tao file app-routing.module
